@@ -1,4 +1,4 @@
-
+import {useState} from "react";
 import "./App.css";
 
 
@@ -7,63 +7,25 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-   
-  <div className="container">
-            <h5 className="card-title">Free</h5>
-            <h6 className="card-price">$0<span className="period">/month</span></h6>
-            <ul className="fa-ul" type="none">
-              <li><strong>&#x2714; </strong>Single User</li>
-              <li><strong>&#x2714; </strong>5GB Storage</li>
-              <li><strong>&#x2714; </strong>Unlimited Public Projects</li>
-              <li><strong>&#x2714; </strong>Community Access</li>
-              <li className="text-muted"><strong>&#10006; </strong>Unlimited
-                Private Projects</li>
-              <li className="text-muted"><strong>&#10006; </strong>Dedicated
-                Phone Support</li>
-              <li className="text-muted"><strong>&#10006; </strong>Free Subdomain
-              </li>
-              <li className="text-muted"><strong>&#10006; </strong>Monthly Status
-                Reports</li>
-            </ul>
-            <div><button className="btn1">Button</button></div>
-            </div>
-       
-            <div className="container">
-            <h5 className="card-title">Plus</h5>
-            <h6 className="card-price">$9<span class="period">/month</span></h6>
-            <ul className="fa-ul" type="none">
-              <li><strong>&#x2714; </strong><strong>5 Users</strong></li>
-              <li><strong>&#x2714; </strong>50GB Storage</li>
-              <li><strong>&#x2714; </strong>Unlimited Public Projects</li>
-              <li><strong>&#x2714; </strong>Community Access</li>
-              <li><strong>&#x2714; </strong>Unlimited Private Projects</li>
-              <li><strong>&#x2714; </strong>Dedicated Phone Support</li>
-              <li><strong>&#x2714; </strong>Free Subdomain</li>
-              <li className="text-muted"><strong>&#10006; </strong>Monthly Status
-                Reports</li>
-                </ul>
-
-              <div><button className="btn1">Button</button></div>
-            </div>
-        
-            <div className="container">
-            <h5 className="card-title">Pro</h5>
-            <h6 className="card-price">$49<span class="period">/month</span></h6>
-            <ul className="fa-ul" type="none">
-              <li><strong>&#x2714; </strong><strong>Unlimited Users</strong>
-              </li>
-              <li><strong>&#x2714; </strong>150GB Storage</li>
-              <li><strong>&#x2714; </strong>Unlimited Public Projects</li>
-              <li><strong>&#x2714; </strong>Community Access</li>
-              <li><strong>&#x2714; </strong>Unlimited Private Projects</li>
-              <li><strong>&#x2714; </strong>Dedicated Phone Support</li>
-              <li><strong>&#x2714; </strong><strong>Unlimited</strong> Free
-                Subdomains</li>
-              <li><strong>&#x2714; </strong>Monthly Status Reports</li>
-            </ul>
-              <div><button className="btn1">Button</button></div>
-            </div>
+   <TopLayout/>
             </div>
 );
 }
-
+function TopLayout(){
+  const [count,setCount]=useState(0);
+  return(
+    <div>
+      <nav>
+        <h2 className="heading">Start Bootstrap</h2>
+        <ul className="topBar" type="none">
+          <li>Home</li>
+          <li>About</li>
+          <li><select name="Shop" id="shop_tab"><option id="allProducts" value="#">All Products</option>
+          <option value="#">Popular Items</option>
+          <option value="#">New Arrivals</option></select></li>
+        </ul>
+        <button className="btn1">Cart {count}</button>
+      </nav>
+    </div>
+  );
+}
