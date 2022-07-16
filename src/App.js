@@ -1,69 +1,50 @@
-
+import logo from './logo.svg';
 import "./App.css";
 
 
 
 // App - component
-export default function App() {
+function App() {
+  const mobiles = [
+    {
+      model: "OnePlus 9 5G",
+      img: "https://m.media-amazon.com/images/I/61fy+u9uqPL._SX679_.jpg",
+      company: "Oneplus"
+    },
+    {
+      model: "Iphone 13 mini",
+      img:
+        "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-mini-blue-select-2021?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1645572315986",
+      company: "Apple"
+    },
+    {
+      model: "Samsung s21 ultra",
+      img: "https://m.media-amazon.com/images/I/81kfA-GtWwL._SY606_.jpg",
+      company: "Samsung"
+    },
+    {
+      model: "Xiomi mi 11",
+      img: "https://m.media-amazon.com/images/I/51K4vNxMAhS._AC_SX522_.jpg",
+      company: "Xiomi"
+    }
+  ];
+  
   return (
     <div className="App">
-   
-  <div className="container">
-            <h5 className="card-title">Free</h5>
-            <h6 className="card-price">$0<span className="period">/month</span></h6>
-            <ul className="fa-ul" type="none">
-              <li><strong>&#x2714; </strong>Single User</li>
-              <li><strong>&#x2714; </strong>5GB Storage</li>
-              <li><strong>&#x2714; </strong>Unlimited Public Projects</li>
-              <li><strong>&#x2714; </strong>Community Access</li>
-              <li className="text-muted"><strong>&#10006; </strong>Unlimited
-                Private Projects</li>
-              <li className="text-muted"><strong>&#10006; </strong>Dedicated
-                Phone Support</li>
-              <li className="text-muted"><strong>&#10006; </strong>Free Subdomain
-              </li>
-              <li className="text-muted"><strong>&#10006; </strong>Monthly Status
-                Reports</li>
-            </ul>
-            <div><button className="btn1">Button</button></div>
-            </div>
-       
-            <div className="container">
-            <h5 className="card-title">Plus</h5>
-            <h6 className="card-price">$9<span class="period">/month</span></h6>
-            <ul className="fa-ul" type="none">
-              <li><strong>&#x2714; </strong><strong>5 Users</strong></li>
-              <li><strong>&#x2714; </strong>50GB Storage</li>
-              <li><strong>&#x2714; </strong>Unlimited Public Projects</li>
-              <li><strong>&#x2714; </strong>Community Access</li>
-              <li><strong>&#x2714; </strong>Unlimited Private Projects</li>
-              <li><strong>&#x2714; </strong>Dedicated Phone Support</li>
-              <li><strong>&#x2714; </strong>Free Subdomain</li>
-              <li className="text-muted"><strong>&#10006; </strong>Monthly Status
-                Reports</li>
-                </ul>
-
-              <div><button className="btn1">Button</button></div>
-            </div>
-        
-            <div className="container">
-            <h5 className="card-title">Pro</h5>
-            <h6 className="card-price">$49<span class="period">/month</span></h6>
-            <ul className="fa-ul" type="none">
-              <li><strong>&#x2714; </strong><strong>Unlimited Users</strong>
-              </li>
-              <li><strong>&#x2714; </strong>150GB Storage</li>
-              <li><strong>&#x2714; </strong>Unlimited Public Projects</li>
-              <li><strong>&#x2714; </strong>Community Access</li>
-              <li><strong>&#x2714; </strong>Unlimited Private Projects</li>
-              <li><strong>&#x2714; </strong>Dedicated Phone Support</li>
-              <li><strong>&#x2714; </strong><strong>Unlimited</strong> Free
-                Subdomains</li>
-              <li><strong>&#x2714; </strong>Monthly Status Reports</li>
-            </ul>
-              <div><button className="btn1">Button</button></div>
-            </div>
-            </div>
+   <div className="phones-container">{mobiles.map((m)=>(<Phone mobile ={m}/>))}</div>
+   <Phone/>
+    </div>
 );
 }
-
+function Phone({mobile}){
+  
+  return(
+    <div className="phone-container">
+      <img className="phone-picture" src={mobile.img} alt={mobile.model}/>
+      <h2 className ="phone-name">{mobile.model}</h2>
+      <p className="phone-company">{mobile.company}</p>
+      </div>
+  );
+}
+export default App;
+     
