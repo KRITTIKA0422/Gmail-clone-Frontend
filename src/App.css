@@ -1,83 +1,79 @@
-.App{
-    background-color:#007bff;
-    background: linear-gradient(to right, #0062E6, #33AEFF);
-    display:flex;
-    flex-direction: row;
-    align-items: center;  
-   padding-left: 12rem;
-   padding-right: 12rem;
-}
-.container{
-    border: none;
-   border-radius: 1rem;
-   transition: all 0.2s;
-   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-    background-color: white;
-    margin-left: 2vw;
-    margin-top: 6vh;
-    margin-bottom: 4vh;
-    
-    
-}
-.card-title{
+.App {
     text-align: center;
-    text-transform: uppercase;
-    font-weight: bolder;
-    color:rgb(185, 182, 182);
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    letter-spacing: .1rem;
-    padding-top: 1rem;
-}
-.card-price{
-    font-size: 3rem;
-   margin: 0;
-   text-align: center;
-  padding-bottom:20px;
-   border-bottom: 1px solid rgba(185, 182, 182, 0.712);
-   margin-left: 1rem;
-   margin-right: 1rem;
-   margin-bottom: 1.5rem;
-}
-.period{
-    font-size: 0.8rem;
-}
-.container ul li{
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
-}
-.text-muted{
-    opacity: 0.5;
-}
-.btn1 {
-    text-transform: uppercase;
-    color: white;
-    font-size: 80%;
-    border-radius: 5rem;
-    letter-spacing: .1rem;
-    font-weight: bolder;
-    padding: 1rem;
-    transition: all 0.2s;
-    background-color:#007bff;
-    opacity: 0.7;
-    padding: 1.2rem;
-    padding-left:5.7rem;
-    padding-right: 5.7rem;
-    margin-left: 1.1rem;
-    margin-right: 1.1rem;
-    margin-bottom: 1rem;
-    border:none;
   }
-  @media (min-width: 992px) {
-    .container:hover {
-      margin-top: .25rem;
-      margin-bottom: .25rem;
-      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-    }
   
-    .container:hover .btn1 {
-        background-color: #007bff;
-      opacity: 1;
-      
-    }
-}
+  body {
+    background-color: whitesmoke;
+    font-family: Roboto;
+    margin: 16px;
+  }
+  
+  .phone-name {
+    padding: 16px;
+    font-size: 48px;
+    margin-bottom: 0px;
+  }
+  
+  .phone-company {
+    font-size: 32px;
+    color: grey;
+    margin-top: 0px;
+  }
+  
+  .phone-picture {
+    height: 540px;
+    width: 750px;
+    object-fit: contain;
+  }
+  
+  .phone-container {
+    background-color: white;
+    width: 750px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: rgb(0 0 0 / 24%) 1px 2px 13px;
+  }
+  
+  .phone-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin: 24px;
+  }
+  
+  .phone-add-cart {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .cart-item-container {
+    display: flex;
+    background-color: white;
+    text-align: left;
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .cart-item-picture {
+    height: 240px;
+    width: 350px;
+    object-fit: contain;
+  }
+  
+  .cart-item-company {
+    color: grey;
+    margin-top: 0px;
+  }
+  
+  .cart-item-quantity > span {
+    color: grey;
+    font-size: 14px;
+  }
+  
+  .cart-checkout {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
