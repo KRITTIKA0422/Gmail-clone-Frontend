@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 // App - component
 function App() {
   const[mobiles,setMobiles]=useState({});
-  useEffect(()=>{
+  useEffect(()=>
     fetch(`hhttp://localhost:4000/mobiles`,{
       method:"GET",
     })
