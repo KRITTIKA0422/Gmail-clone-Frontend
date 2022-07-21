@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 function App() {
   const[mobiles,setMobiles]=useState({});
   useEffect(()=>{
-    fetch(`http://localhost:4000/mobiles`,{
+    fetch(`hhttp://localhost:4000/mobiles`,{
       method:"GET",
     })
     .then((data)=>data.json())
