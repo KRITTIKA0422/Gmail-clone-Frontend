@@ -6,32 +6,39 @@ import { useEffect } from 'react';
 
 // App - component
 function App() {
-  const mobiles = [
-    {
-      model: "OnePlus 9 5G",
-      img: "https://m.media-amazon.com/images/I/61fy+u9uqPL._SX679_.jpg",
-      company: "Oneplus"
-    },
-    {
-      model: "Iphone 13 mini",
-      img:
-        "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-mini-blue-select-2021?wid=470&hei=556&fmt=jpeg&qlt=95&.v=1645572315986",
-      company: "Apple"
-    },
-    {
-      model: "Samsung s21 ultra",
-      img: "https://m.media-amazon.com/images/I/81kfA-GtWwL._SY606_.jpg",
-      company: "Samsung"
-    },
-    {
-      model: "Xiomi mi 11",
-      img: "https://m.media-amazon.com/images/I/51K4vNxMAhS._AC_SX522_.jpg",
-      company: "Xiomi"
-    }
-  ];
+
+  const[mobiles,setMobiles]=useState({});
+  useEffect(()=>{
+    fetch(`http://localhost:4000/mobiles`,{
+      method:"GET",
+    })
+    .then((data)=>data.json())
+    .then((m)=>setMobiles (m));
+  },[]);
   
   return (
     <div className="App">
+    <div className="search-container">
+    <label for="search">Search for mobiles</label>
+        <input
+          type="number"
+          name="phone"
+          id="phone"
+          placeholder="Enter mobile id number"
+          required
+        />
+    </div>
+    <div className="phone-list"><ul>
+      <li>REALME NARZO 50A PRIME- ID- 1</li>
+      <li>REDMI NOTE 11- ID- 2</li>
+      <li>SAMSUNG GALAXY A03- ID- 3</li>
+      <li>SAMSUNG GALAXY M33 5G- ID- 4</li>
+      <li>SAMSUNG GALAXY S20 FE 5G- ID- 5</li>
+      <li>ONEPLUS 8T5G- ID- 6</li>
+      <li>ONEPLUS 10R 5G- ID- 7</li>
+      <li>SAMSUNG GALAXY M52 5G- ID- 8</li>
+      <li>MOTOROLA 63 2S- ID- 9</li>
+      <li>REALME NARZO 50i- ID- 10</li></ul></div>
    <div className="phones-container">{mobiles.map((m)=>(<Phone mobile ={m}/>))}</div>
     </div>
 );
