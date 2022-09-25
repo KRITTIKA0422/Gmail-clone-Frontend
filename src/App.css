@@ -1,80 +1,28 @@
-.App {
-  text-align: center;
+.movie-specs{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-body {
-  background-color: whitesmoke;
-  font-family: Roboto;
-  margin: 16px;
+.movie-container{
+  width:340px;
 }
-
-.phone-name {
-  padding: 16px;
-  font-size: 48px;
-  margin-bottom: 0px;
+.movie-poster{
+  width: 340px;
+  height: 600px;
+  object-fit: cover;
 }
-
-.phone-company {
-  font-size: 32px;
-  color: grey;
-  margin-top: 0px;
+.movie-name{
+  font-size: 24px;
+  margin: 0;
 }
-
-.phone-picture {
-  height: 540px;
-  width: 750px;
-  object-fit: contain;
+.movie-summary{
+  margin-top: 0;
 }
-
-.phone-container {
-  background-color: white;
-  width: 750px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: rgb(0 0 0 / 24%) 1px 2px 13px;
+.movie-rating{
+  font-size: 18px;
 }
-
-.phone-list-container {
+.movie-List-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  margin: 24px;
+  justify-content: space-evenly;
 }
-
-.phone-add-cart {
-  font-size: 24px;
-  margin-bottom: 24px;
-}
-
-.cart-item-container {
-  display: flex;
-  background-color: white;
-  text-align: left;
-  width: 100%;
-  border-radius: 12px;
-}
-
-.cart-item-picture {
-  height: 240px;
-  width: 350px;
-  object-fit: contain;
-}
-
-.cart-item-company {
-  color: grey;
-  margin-top: 0px;
-}
-
-.cart-item-quantity > span {
-  color: grey;
-  font-size: 14px;
-}
-
-.cart-checkout {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-   
