@@ -6,7 +6,7 @@ import "./Main.css";
 
 export default function Main(){
     return(
-        <div className="wrapper">
+        <div className="mainwrapper">
             <Sidebar />
             <Emailsview />
             <Sideicons />
