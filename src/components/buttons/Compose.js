@@ -1,12 +1,11 @@
 import React from "react";
-//import AddIcon from '@mui/icons-material/Add';
-import ModeIcon from '@mui/icons-material/Mode';
+import CreateOutlinedIcon from '@mui/icons-material/CreateOutlined';
 import "./Compose.css";
 
 export default function Compose(){
     return(
         <div className="cwrapper">
-      <ModeIcon fontSize="large"/>
+      <CreateOutlinedIcon fontSize="large"/>
       <p>Compose</p>
            </div>
     )

@@ -1,0 +1,11 @@
+.sideiconwrappercolumn{
+    display: grid;
+    grid-template-rows: repeat(4, 50px) 1px 50px;
+    place-items: center;
+    border-left: 1px solid lightgray;
+}
+.sideiconwrappercolumn img{
+    width: 100%;
+    max-width: 22px;
+    object-fit: contain;
+}

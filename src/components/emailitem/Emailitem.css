@@ -1,0 +1,19 @@
+.emailitemcontainer{
+    padding-left: 20px;
+    border-top: 1px solid lightgray;
+    display: grid;
+    grid-template-columns: min-content min-content 120px auto 50px;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 20px;
+}
+.emailitemcontainer div{
+display: flex;
+}
+.message{
+    color: darkgray;
+}
+.unread{
+    color: black;
+    font-weight: bolder;
+}

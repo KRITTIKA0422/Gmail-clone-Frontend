@@ -1,9 +1,9 @@
 import InboxIcon from '@mui/icons-material/Inbox';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import WatchLaterIcon from '@mui/icons-material/WatchLater';
-import SendIcon from '@mui/icons-material/Send';
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
-import LabelIcon from '@mui/icons-material/Label';
+import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
+import LabelOutlinedIcon from '@mui/icons-material/LabelOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export const sidebarbuttonitems=[
@@ -16,19 +16,19 @@ export const sidebarbuttonitems=[
         text: 'Starred'
     },
     {
-        icon: <WatchLaterIcon/>,
+        icon: <WatchLaterOutlinedIcon/>,
         text: 'Snoozed'
     },
     {
-        icon: <SendIcon/>,
+        icon: <SendOutlinedIcon/>,
         text: 'Sent'
     },
     {
-        icon: <InsertDriveFileIcon/>,
+        icon: <InsertDriveFileOutlinedIcon/>,
         text: 'Drafts'
     },
     {
-        icon: <LabelIcon/>,
+        icon: <LabelOutlinedIcon/>,
         text: 'Notes'
     },
     {

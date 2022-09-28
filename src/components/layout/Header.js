@@ -3,7 +3,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
-import SettingsIcon from '@mui/icons-material/Settings';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import AppsIcon from '@mui/icons-material/Apps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import "./Header.css";
@@ -30,7 +30,7 @@ export default function Header(){
            </div>
            <div className="iconswrapper">
              <HelpOutlineIcon/>
-             <SettingsIcon/>
+             <SettingsOutlinedIcon/>
              <AppsIcon/>
              <AccountCircleIcon/>
            </div>
