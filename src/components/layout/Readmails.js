@@ -1,7 +1,7 @@
 import React from "react";
-import "./Mailing.css";
+import "./Readmails.css";
 
-export default function Mailing(){
+export default function Readmails(){
     return(
         <div className="mailing">
             <div className="mail_tools">

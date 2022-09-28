@@ -1,63 +1,20 @@
 .sidebarwrapper{
-    border-right: 1px solid lightgray;
-    height: calc(100vh-70px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex: 0.3;
+  max-width: 300px;
+  padding-right: 20px;
 }
-.topsectionwrapper{
-
+.sidebar_compose{
+  margin-top: 15px !important;
+  margin-left: 10px !important;
+  margin-bottom: 15px !important;
+  text-transform: capitalize !important;
+  color: gray;
+  padding:15px !important;
+  border-radius: 30px !important;
+  box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.75);
+  
 }
-.bottomswrapper{
-    margin-bottom: 30px;
-    }
-.composewrapper{
-    display: grid;
-    place-items: start;
-    padding: 10px 20px;
-}
-.sidebarbuttons{
-    display: grid;
-    grid-template-columns: 14% auto;
-    height: 30px;
-    align-items: center;
-    color:gray;
-    padding: 0 25px;
-    border-radius: 0 100px 100px 0;
-    cursor:pointer;
-    margin-right: 8px;
-}
-.sidebarbuttons:hover{
-    background-color: #f5f7f7;
-
-}
-.sidesectionwrapper h4{
-    padding-left: 25px;
-    margin-bottom: 3px;
-    margin-top: 8px;
-}
-.sidesectionwrapper{
-    border-top: 1px solid lightgray;
-}
-.sidesectionwrapper p{
-    color: gray;
-    display: grid;
-    grid-template-columns: 14% auto;
-    height: 30px;
-    align-items: center;
-    padding-left: 25px;
-    border-radius: 0 100px 100px 0;
-}
-.sidesectionwrapper p:hover{
-    background-color: #f5f7f7;
-}
-.bottomiconswrapper{
-    display: flex;
-    justify-content: center;
-    color: gray;
-    border-top: 1px solid lightgray;
-    margin-top: 60px;
-}
-.MuiSvgIcon-root{
-    padding: 2px;
+.sidebar_footer{
+  display: flex;
+  justify-content: center;
 }
