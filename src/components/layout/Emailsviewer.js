@@ -10,7 +10,9 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import PeopleIcon from '@mui/icons-material/People';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import Section from './Section';
+import Emailrow from "./Emailrow";
 import "./Emailsviewer.css";
+
 
 export default function Emailsviewer(){
     return(
@@ -41,7 +43,17 @@ export default function Emailsviewer(){
                 <Section Icon={InboxIcon} title='Primary'color='red' selected/>
                 <Section Icon={PeopleIcon} title='Social'color='#1A73E8'/>
                 <Section Icon={LocalOfferIcon} title='Promotions'color='green'/>
-                </div>      
+                </div>   
+                <div className="emailList_list">
+                <Emailrow title="Twitch"
+                 subject="Ping up"
+                 description="How are you?"
+                 time="09:25"/>
+                 <Emailrow title="Bholanath"
+                 subject="Meet proposal"
+                 description="I want to meet you"
+                 time="10:00"/>
+                    </div>   
            </div>
-    )
+    );
 }
