@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Emailrow({title,subject,description,time}){
     const navigate = useNavigate();
     return(
-        <div  className="emailRow">
+        <div  onClick={()=>navigate("mail")} className="emailRow">
          <div className="emailRow_options">
             <Checkbox/>
             <IconButton>

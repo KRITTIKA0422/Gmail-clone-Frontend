@@ -1,0 +1,7 @@
+.main{
+height: 100vh;
+}
+.bodywrapper{
+    display: flex;
+    height: 100vh;
+}

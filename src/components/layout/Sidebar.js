@@ -13,14 +13,16 @@ import PersonIcon from '@mui/icons-material/Person';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import PhoneIcon from '@mui/icons-material/Phone';
 import Sidebaroptions from "./Sidebaroptions";
-
-
+import SentMail from "./SentMail";
+import {useState} from "react";
 import "./Sidebar.css";
 
 export default function Sidebar(){
+    const [show,setShow]= useState(true);
     return(
         <div className="sidebarwrapper">
-            <Button startIcon={<CreateOutlinedIcon/>} className="sidebar_compose">Compose</Button> 
+            <Button startIcon={<CreateOutlinedIcon/>} className="sidebar_compose" onClick={()=>setShow(!show)}>Compose</Button>
+            {show?<SentMail/>:""} 
             <Sidebaroptions Icon ={InboxIcon} title="Inbox" number="65" selected={true} />
             <Sidebaroptions Icon ={StarOutlineIcon} title="Starred" number="5" />
             <Sidebaroptions Icon ={WatchLaterOutlinedIcon} title="Snoozed" number="4" />
