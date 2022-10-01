@@ -13,15 +13,15 @@ import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import PrintIcon from '@mui/icons-material/Print';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useNavigate } from 'react-router-dom';
-import "./Readmails.css";
+import "./Readsentmails.css";
 
-export default function Readmails({readdetails}){
+export default function Readsentmails({sentdetails}){
     const navigate = useNavigate();
     return( 
-        <div className="mail">
-            <div className="mail_tools">
-                <div className="mail_toolsleft">
-                <IconButton onClick={()=>navigate("/main")}>
+        <div className="smail">
+            <div className="smail_tools">
+                <div className="smail_toolsleft">
+                <IconButton onClick={()=>navigate("sent/sentlist")}>
                     <ArrowBackIcon/>
                     </IconButton>
                     <IconButton>
@@ -49,7 +49,7 @@ export default function Readmails({readdetails}){
                     <MoreVertIcon/>
                     </IconButton> 
                 </div>
-                <div className="mail_toolsRight">
+                <div className="smail_toolsRight">
                 <IconButton>
                     <UnfoldMoreIcon/>
                     </IconButton>  
@@ -61,15 +61,14 @@ export default function Readmails({readdetails}){
                     </IconButton> 
                 </div>
             </div>
-          <div className="mail_body">
-            <div className="mail_bodyHeader">
-              <h2>{readdetails.subject}</h2>
-              <LabelImportantIcon className="mail_important"/>
-              <p>{readdetails.title}</p>
-              <p className="mail_time">{readdetails.time}</p>
+          <div className="smail_body">
+            <div className="smail_bodyHeader">
+              <h2>{sentdetails.subject}</h2>
+              <LabelImportantIcon className="smail_important"/>
+              <p>{sentdetails.to}</p>
             </div>
-            <div className="mail_message">
-                <p>{readdetails.description}</p>
+            <div className="smail_message">
+                <p>{sentdetails.message}</p>
             </div>
           </div>
            </div>

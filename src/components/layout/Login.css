@@ -1,0 +1,16 @@
+.login_form{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ width: 50vw;
+}
+.form_container{
+   padding-top: 30px;
+   margin-top: 20px;
+   margin-left: 25vw;
+}
+.loginheader{
+    color:gray;
+    margin-left:15vw;
+    margin-bottom: 3vh;
+}

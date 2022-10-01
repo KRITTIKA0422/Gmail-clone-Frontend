@@ -15,7 +15,9 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import Sidebaroptions from "./Sidebaroptions";
 import SentMail from "./SentMail";
 import {useState} from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
+
 
 export default function Sidebar(){
     const [show,setShow]= useState(true);
@@ -23,12 +25,12 @@ export default function Sidebar(){
         <div className="sidebarwrapper">
             <Button startIcon={<CreateOutlinedIcon/>} className="sidebar_compose" onClick={()=>setShow(!show)}>Compose</Button>
             {show?<SentMail/>:""} 
-            <Sidebaroptions Icon ={InboxIcon} title="Inbox" number="65" selected={true} />
-            <Sidebaroptions Icon ={StarOutlineIcon} title="Starred" number="5" />
-            <Sidebaroptions Icon ={WatchLaterOutlinedIcon} title="Snoozed" number="4" />
-            <Sidebaroptions Icon ={SendOutlinedIcon} title="Sent" number="65" />
-            <Sidebaroptions Icon ={InsertDriveFileOutlinedIcon} title="Drafts" number="1" />
-            <Sidebaroptions Icon ={LabelOutlinedIcon} title="Notes" number="" />
+            <Link to="/main"><Sidebaroptions Icon ={InboxIcon} title="Inbox"  selected={true} number=""/></Link>
+            <Sidebaroptions Icon ={StarOutlineIcon} title="Starred" number=""  />
+            <Sidebaroptions Icon ={WatchLaterOutlinedIcon} title="Snoozed" number="" />
+            <Link to="sentlist"><Sidebaroptions Icon ={SendOutlinedIcon} title="Sent" number="" /></Link>
+            <Sidebaroptions Icon ={InsertDriveFileOutlinedIcon} title="Drafts" number=""/>
+            <Sidebaroptions Icon ={LabelOutlinedIcon} title="Notes" number=""/>
             <Sidebaroptions Icon ={ExpandMoreIcon} title="More" number="" />
             <div className="sidebar_footer">
                 <div className="sidebar_footericons">

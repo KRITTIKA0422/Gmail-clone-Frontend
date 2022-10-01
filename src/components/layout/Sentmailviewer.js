@@ -10,21 +10,21 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import PeopleIcon from '@mui/icons-material/People';
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import Section from './Section';
-import Emailrow from "./Emailrow";
+import Sentmailrow from "./Sentmailrow";
 import {useState} from "react";
 import { useEffect } from "react";
 import { API } from "./Global";
-import "./Emailsviewer.css";
+import "./Sentmailviewer.css";
 
 
-export default function Emailsviewer(){
-   const[mailsin,setMailsin]=useState([]);
+export default function Sentmailviewer(){
+   const[mailsout,setMailsout]=useState([]);
    useEffect(()=>{
-     fetch(`${API}/mailsin`)
+     fetch(`${API}/mailsout`)
      .then((data)=>data.json())
-     .then((m)=>setMailsin (m));
+     .then((m)=>setMailsout (m));
    },[]);
-   console.log (mailsin);
+   console.log (mailsout);
     return(
         <div className="emailList">
             <div className="emailList_settings">
@@ -54,7 +54,7 @@ export default function Emailsviewer(){
                 <Section Icon={PeopleIcon} title='Social'color='#1A73E8'/>
                 <Section Icon={LocalOfferIcon} title='Promotions'color='green'/>
                 </div>   
-                <div className="emailList_list">{mailsin.map((m)=>(<Emailrow incomemails={m}/>))}
+                <div className="emailList_list">{mailsout.map((m)=>(<Sentmailrow outermails={m}/>))}
                     </div>   
            </div>
     );
