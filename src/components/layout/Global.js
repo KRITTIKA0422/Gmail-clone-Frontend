@@ -1,1 +1,1 @@
-export const API="https://gmail-clone-krit123.herokuapp.com";
+export const API="https://gmail-clone-backend-beta.vercel.app";
