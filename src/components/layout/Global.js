@@ -1,1 +1,1 @@
-export const API="https://gmail-clone-backend-eh8z.vercel.app";
+export const API="https://gmailclonebackend.onrender.com";
