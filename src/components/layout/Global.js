@@ -1,1 +1,1 @@
-export const API="https://gmailclonebackend.onrender.com";
+export const API="https://mailbackend.onrender.com";
